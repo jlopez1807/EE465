@@ -1,0 +1,32 @@
+#!/bin/sh
+ans_var_1="poppy"
+ans_var_2="quail"
+ans_var_3="sacramento"
+score=0
+echo "Welcome to Quiz Game"
+echo "Answers are case sensitive, enter answers in lowercase form only!"
+echo "Question 1: What is the state flower of California?"
+read answer_1
+if [ "$answer_1" != "$ans_var_1" ]; then
+    echo "Wrong! The right answer is poppy"
+else
+    echo "Right!"
+    score=$(($score+1))
+fi
+echo "Question 2: What is the state bird of California?"
+read answer_2
+if [ "$answer_2" != "$ans_var_2" ]; then
+    echo "Wrong! The right answer is quail"
+else
+    echo "Right!"
+    score=$(($score+1))
+fi
+echo "Question 3: What is the state capital of California?"
+read answer_3
+if [ "$answer_3" != "$ans_var_3" ]; then
+    echo "Wrong! The right answer is sacramento"
+else
+    echo "Right!"
+    score=$(($score+1))
+fi
+echo "Thank you for taking this quiz on $(date)\nYour score is: $score"
